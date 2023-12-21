@@ -83,3 +83,42 @@ Given an array of count-paired domains `cpdomains`, return an array of the count
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've written a function called `subdomainVisits` that takes in an array of strings called `cpdomains`. Each string in the array represents a number of visits to a particular domain. The function returns an array of strings, where each string represents the number of visits and the corresponding subdomain.
+<br/>
+
+Inside the function, an empty object called `visitCounts` is initialized to store the count of visits for each subdomain.
+<br/>
+
+The function then enters a loop that iterates over each element in the `cpdomains` array.
+<br/>
+
+For each element, it splits the string into two parts: the number of visits and the domain. This is done using the `split` method with a space as the separator. The resulting values are stored in variables called `visits` and `domains`.
+<br/>
+
+The `domains` string is further split into an array of subdomains using the `split` method with a dot as the separator. The resulting array is stored in a variable called `subdomains`.
+<br/>
+
+A `while` loop is then initiated, which continues as long as there are elements in the `subdomains` array.
+<br/>
+
+Within the `while` loop, it joins the elements of the `subdomains` array into a string with dots in between using the `join` method. This creates the full subdomain.
+<br/>
+
+It checks if the `visitCounts` object has a property with the current subdomain using the `hasOwnProperty` method. If it does, it increments the count of visits for that subdomain by adding the current number of visits (converted to a number). If it doesn't, it assigns the current number of visits to that subdomain.
+<br/>
+
+After that, it removes the first element from the `subdomains` array using the `shift` method, allowing the `while` loop to continue with the remaining subdomains.
+<br/>
+
+Once the `while` loop ends, the function returns an array of strings. It uses the `map` method on the keys of the `visitCounts` object. For each key, it creates a string by concatenating the count of visits and the subdomain.
+<br/>
+
+The resulting array of strings is the final result of the function.
+<br/>
+
+In summary, the `subdomainVisits` function counts the number of visits to subdomains based on the input array of strings. It uses an object to store the count of visits for each subdomain and returns an array of strings representing the count and corresponding subdomains.
+<br/>
+<br/>

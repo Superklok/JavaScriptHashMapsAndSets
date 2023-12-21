@@ -74,3 +74,27 @@ All the words in `s` are separated by a single space.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've built a function called `wordPattern` that takes two parameters: `pattern` and `s` (string). Its purpose is to check if the pattern matches the string by mapping each character in the pattern to a word in the string.
+<br/>
+
+Inside the function, the string `s` is split into an array of words using the `split()` method and stored in the variable `arr`. An empty object called `map` is also created.
+<br/>
+
+The function then checks if the length of the `arr` array is not equal to the length of the `pattern` or if the number of unique characters in the `pattern` is not equal to the number of unique words in `arr`. If either of these conditions is true, the function immediately returns `false`.
+<br/>
+
+Next, a `for` loop is used to iterate through each character in the `pattern`. Inside the loop, it checks if the current character is already a key in the `map` object. If it is not, the character is added as a key in the `map` object, and the corresponding word in `arr` is added as the value.
+<br/>
+
+If the current character is already a key in the `map` object, it checks if the value of the key matches the corresponding word in `arr`. If the values do not match, the function immediately returns `false`.
+<br/>
+
+If the `for` loop completes without returning `false`, it means that the pattern matches the string, and the function returns true.
+<br/>
+
+In summary, the `wordPattern` function checks if a given pattern matches a given string by mapping each character in the pattern to a word in the string. It returns `true` if the mapping is successful, and `false` otherwise.
+<br/>
+<br/>

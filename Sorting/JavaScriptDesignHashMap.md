@@ -76,3 +76,24 @@ At most `10⁴` calls will be made to `put`, `get`, and `remove`.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've built a class called `MyHashMap` which is used to create a hash map data structure. The hash map stores key-value pairs, where keys are unique identifiers and values are associated data.
+<br/>
+
+The `MyHashMap` class is defined using the constructor function. The constructor initializes an empty object called "map" as a property of the class.
+<br/>
+
+The `put` method is defined as a prototype function of the `MyHashMap` class. It takes two parameters, `key` and `value`, and assigns the `value` to the "map" object using the `key` as the identifier.
+<br/>
+
+The `get` method is also defined as a prototype function of the `MyHashMap` class. It takes one parameter, `key`, and checks if the `map` object has a property with that key. If the property exists, it returns the associated value; otherwise, it returns`-`.
+<br/>
+
+The `remove` method is defined as a prototype function of the `MyHashMap` class. It takes one parameter, `key`, and deletes the property with that key from the `map` object.
+<br/>
+
+To summarize, I've designed a hash map data structure with the ability to add, retrieve, and remove key-value pairs.
+<br/>
+<br/>

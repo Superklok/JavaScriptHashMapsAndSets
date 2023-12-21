@@ -78,3 +78,33 @@ Given the integer array `candyType` of length `n`, return the maximum number of 
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've created a function called `distributeCandies` that takes an array called `candyType` as its parameter. This function calculates the maximum number of different types of candies that can be distributed to a person by following a certain rule.
+<br/>
+
+The function starts by initializing an empty object called `hashMap` and a variable called `output` with a value of `0`.
+<br/>
+
+It then enters a `for` loop that iterates through each element in the `candyType` array.
+<br/>
+
+Inside the loop, it checks if the current candy type `(candyType[i]` is not already present as a key in the `hashMap` object. If it is not, it means that this is a new type of candy, so the `output` variable is incremented by `1`.
+<br/>
+
+After that, it assigns the value of `i + 1` to the `candyType[i]` key in the `hashMap` object. This is done to keep track of the index of the last occurrence of each candy type.
+<br/>
+
+Next, it checks if the `output` variable is equal to half of the length of the `candyType` array. If it is, it means that the maximum number of different candies that can be distributed has been reached, so the function returns the current value of `output`.
+<br/>
+
+If the condition mentioned above is not met, the loop continues to the next iteration.
+<br/>
+
+After the loop finishes, the function returns the final value of `output`, which represents the maximum number of different candies that can be distributed.
+<br/>
+
+In summary, this function calculates the maximum number of different candies that can be distributed to a person by iterating through an array of candy types and keeping track of the number of unique candy types encountered.
+<br/>
+<br/>

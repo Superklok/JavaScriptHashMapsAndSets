@@ -81,3 +81,21 @@ All the strings are of the same length.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've defined a function called `numSpecialEquivGroups` that takes in an array of words as an argument and returns the number of groups of words that have the same special equivalence.
+<br/>
+
+Inside the function, there is a helper function called `transform`. This function takes in a word and splits it into two arrays: one for the odd-indexed characters and one for the even-indexed characters. It then sorts both arrays and concatenates them into a single string.
+<br/>
+
+The main function, `numSpecialEquivGroups`, uses the `reduce` method on the input array of words. It applies the `transform` function to each word and adds the resulting string to a new `Set` object.
+<br/>
+
+Finally, the function returns the size of the `Set` object, which represents the number of unique special equivalence groups in the input array.
+<br/>
+
+In summary, the "numSpecialEquivGroups" function groups words based on their special equivalence and returns the count of unique groups. The special equivalence is determined by splitting the words into odd-indexed and even-indexed characters, sorting them, and concatenating them into a single string.
+<br/>
+<br/>

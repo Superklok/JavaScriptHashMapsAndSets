@@ -68,3 +68,33 @@ At most `10⁴` calls will be made to `add`, `remove`, and `contains`.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've written a class called `MyHashSet` that represents a set of unique values. This class has three methods: `add`, `remove`, and `contains`.
+<br/>
+
+The `add` method takes a `key` as a parameter and adds it as a property to the `MyHashSet` object. The `value` of the property is set to `null`.
+<br/>
+
+The remove method takes a `key` as a parameter and deletes the property with that `key` from the `MyHashSet` object.
+<br/>
+
+The contains method takes a `key` as a parameter and checks if the `MyHashSet` object has a property with that `key`. It returns `true` if the property exists, and `false` otherwise.
+<br/>
+
+I used the prototype property of the `MyHashSet` class to define the methods. By doing so, all instances of the `MyHashSet` class will have access to these methods.
+<br/>
+
+In the `add` method, the `key` is added as a property to the current instance of the `MyHashSet` object using the `this` keyword to refer to the current object.
+<br/>
+
+In the `remove` method, the property with the specified `key` is deleted from the current instance of the `MyHashSet` object using the `delete` keyword.
+<br/>
+
+In the `contains` method, the `hasOwnProperty` method is used to check if the current instance of the `MyHashSet` object has a property with the specified `key`. The method returns `true` if the property exists and `false` otherwise.
+<br/>
+
+In summary, I've defined a class called `MyHashSet` with methods to add, remove, and check for the presence of a `key` in the set. This implementation allows for efficient management of a set of unique values.
+<br/>
+<br/>

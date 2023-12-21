@@ -60,3 +60,33 @@ Return the letter that was added to `t`.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've created a function called `findTheDifference` that takes in two strings, `s` and `t`. Its purpose is to find the difference between the two strings by checking if any letter in `t` is not present in `s`. The function then returns the letter that is different.
+<br/>
+
+Inside the function, an empty object called `map` is declared. This object will be used to store the frequency of each letter in string `s`.
+<br/>
+
+A `for` loop is used to iterate through each letter in string `s`. Inside the loop, each letter is assigned to the variable `letter`. This function then checks if the current letter already exists as a key in the `map` object. If it does, the value of that key is incremented by `1`. If it doesn't, a new key is created with the current letter and the value is set to `1`.
+<br/>
+
+After the first loop finishes, the `map` object will contain the frequency of each letter in string `s`.
+<br/>
+
+Another `for` loop is used to iterate through each letter in string `t`. Inside this loop, each letter is assigned to the variable `letter`. The function then checks if the current letter does not exist as a key in the `map` object. If it doesn't, it means that this letter is the difference between the two strings. In this case, the function returns the letter and exits.
+<br/>
+
+If the current letter does exist as a key in the `map` object, it means that it is present in both strings. In this case, the value of that key in the `map` object is decremented by `1`.
+<br/>
+
+The loop continues until all letters in string `t` have been checked.
+<br/>
+
+If the function reaches this point without returning a letter, it means that all letters in string `t` are present in string `s` and have the same frequency. Hence, there is no difference, and the function does not return anything.
+<br/>
+
+In summary, the `findTheDifference` function finds the difference between two strings by comparing the frequency of each letter in the strings. It uses an object to store the frequency of letters in the first string and checks if each letter in the second string is present in the object. If a letter is not found, it is considered the difference, and the function returns that letter.
+<br/>
+<br/>

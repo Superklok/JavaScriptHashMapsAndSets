@@ -87,3 +87,42 @@ Paragraph consists of English letters, space `' '`, or one of the symbols: `"!?'
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've built a function called `mostCommonWord` that takes in a paragraph and an array of banned words as parameters. Its purpose is to find and return the most common word in the paragraph that is not in the banned words list.
+<br/>
+
+Inside the function, a `bannedSet` variable is created using the `Set` constructor, which converts the `banned` array into a set for efficient lookup.
+<br/>
+
+The `paragraph` is then converted to lowercase and split into an array of words using the `split` method with a regular expression `\W+`, which matches one or more non-word characters (such as punctuation or whitespace).
+<br/>
+
+An empty `map` object is created to store the frequency of each word encountered in the paragraph.
+<br/>
+
+An `answer` object is initialized with initial values of `count: 0` and `word: ''`. This object will be used to store the most common word and its frequency.
+<br/>
+
+A `for...of` loop is used to iterate over each word in the `words` array.
+<br/>
+
+Inside the loop, it checks if the current word is not in the `bannedSet` using the `has` method. If it is not banned, it proceeds.
+<br/>
+
+Then it checks if the `map` object does not have the current word as a key. If the word is not already in the map, it initializes it with a value of `0`.
+<br/>
+
+It increments the value of the current word in the `map` object to keep track of its frequency.
+<br/>
+
+Next, it checks if the frequency of the current word is greater than the current `answer.count`. If it is, it updates the `answer.count` and `answer.word` with the current word, representing the new most common word.
+<br/>
+
+After the loop finishes, the function returns the `answer.word`, which represents the most common word in the paragraph that is not in the banned words list.
+<br/>
+
+In summary, the `mostCommonWord` function finds the most common word in a paragraph while excluding any banned words. It uses a set for efficient banned word lookup and a map to keep track of word frequencies.
+<br/>
+<br/>

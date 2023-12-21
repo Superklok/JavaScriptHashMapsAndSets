@@ -66,3 +66,24 @@ Return the number of different transformations among all words we have.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've created a function called `uniqueMorseRepresentations` that takes an array of words as input. Its purpose is to return the number of unique morse code representations of those words.
+<br/>
+
+Inside the function, there is a variable called `decode` which is assigned a function. This function takes a word as input and performs the following steps: it splits the word into an array of individual characters, maps each character to its corresponding morse code representation using the `morseLibrary` object, and then joins the morse code representations back into a single string.
+<br/>
+
+Another variable called `morseLibrary` is declared and assigned an object that maps each letter of the alphabet to its corresponding morse code representation.
+<br/>
+
+The function then creates a new `Set` object using the `new Set()` constructor. It does this by mapping the `decode` function to each word in the input array, which converts the words to their morse code representations. The `Set` object automatically eliminates any duplicate representations.
+<br/>
+
+Finally, the function returns the `size` property of the `Set` object, which represents the number of unique morse code representations.
+<br/>
+
+In summary, the `uniqueMorseRepresentations` function takes an array of words, converts each word into its morse code representation, eliminates duplicates, and returns the count of unique morse code representations.
+<br/>
+<br/>

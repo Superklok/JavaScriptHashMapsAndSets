@@ -95,3 +95,30 @@ Return the sorted string. If there are multiple answers, return any of them.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've created a function called `frequencySort` that takes a string `s` as input. Its purpose is to sort the characters in the string based on their frequency.
+<br/>
+
+Inside the function, an empty `hashMap` is created using the `Map` object to store the frequency of each character in the string. There is also an empty `result` array that will store the sorted characters.
+<br/>
+
+It then iterates over each character in the string using a for loop. Inside the loop, it checks if the character is already present in the `hashMap`. If it is not present, it adds the character as a key in the `hashMap` with a value of `1`. If it is already present, it increments the value of that character in the `hashMap` by `1`.
+<br/>
+
+Next, a new `sortedMap` is created by converting the entries of the `hashMap` to an array, sorting it in descending order based on the frequency of characters, and converting it back to a `Map`.
+<br/>
+
+Another loop is used to iterate over the entries of the `sortedMap` using a for-of loop. Inside this loop, the key and value of each entry are retrieved. Then, a counter `i` is initialized to `0`.
+<br/>
+
+A while loop is used that runs `value` number of times. Inside the while loop, the key (character) is pushed into the `result` array, and the counter `i` is incremented.
+<br/>
+
+Finally, the function returns the `result` array joined as a string, which represents the sorted characters based on their frequency.
+<br/>
+
+In summary, the `frequencySort` function sorts the characters in the input string based on their frequency. It uses a `Map` object to store the frequency of each character, sorts the entries of the `Map` in descending order, and builds a sorted array of characters. The function then returns the sorted characters as a string.
+<br/>
+<br/>
