@@ -1,94 +1,81 @@
 # JavaScript Happy Number
+<br/>
 
-## Challenge:
-
+## Challenge
 Write an algorithm to determine if a number `n` is happy.
 
 A happy number is a number defined by the following process:
-<br/>
-Starting with any positive integer, replace the number by the sum of the squares of its digits.
-<br/>
-Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
-<br/>
-Those numbers for which this process ends in 1 are happy.
+
+- Starting with any positive integer, replace the number by the sum of the squares of its digits.
+- Repeat the process until the number equals `1` (where it will stay), or it loops endlessly in a cycle which does not include `1`.
+- Those numbers for which this process ends in `1` are happy.
 
 Return `true` if `n` is a happy number, and `false` if not.
-
-### 1<sup>st</sup> Example:
-
-`Input: n = 19`
-<br/>
-`Output: true`
-<br/>
-`Explanation: 12 + 92 = 82`
-<br/>
-`82 + 22 = 68`
-<br/>
-`62 + 82 = 100`
-<br/>
-`12 + 02 + 02 = 1`
-
-### 2<sup>nd</sup> Example:
-
-`Input: n = 2`
-<br/>
-`Output: false`
-
-### Constraints:
-
-`1 <= n <= 2³¹ - 1`
-
-## Solution:
-
-`const isHappy = (n) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`const hashMap = {};`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`const recursion = (number) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`const array = number.toString().split('');`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`let newNumber = 0;`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`for(let i = 0; i < array.length; i++) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`newNumber += Number(array[i])**2;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if(newNumber === 1) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return true;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if(hashMap[newNumber]) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return false;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`hashMap[newNumber] = newNumber;`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return recursion(newNumber);`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`};`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return recursion(n);`
-<br/>
-`};`
 <br/>
 <br/>
 
-## Explanation:
+### 1<sup>st</sup> Example
+
+```JavaScript
+Input: n = 19
+Output: true
+Explanation: 1² + 9² = 82
+             8² + 2² = 68
+             6² + 8² = 100
+             1² + 0² + 0² = 1
+```
+
+### 2<sup>nd</sup> Example
+
+```JavaScript
+Input: n = 2
+Output: false
+```
+
+<br/>
+
+### Constraints
+
+```JavaScript
+1 <= n <= 2³¹ - 1
+```
+
+<br/>
+
+## Solution
+
+```JavaScript
+const isHappy = (n) => {
+    const hashMap = {};
+
+    const recursion = (number) => {
+        const array = number.toString().split('');
+        let newNumber = 0;
+
+        for(let i = 0; i < array.length; i++) {
+            newNumber += Number(array[i])**2;
+        }
+
+        if(newNumber === 1) {
+            return true;
+        }
+
+        if(hashMap[newNumber]) {
+            return false;
+        }
+
+        hashMap[newNumber] = newNumber;
+
+        return recursion(newNumber);
+    };
+
+    return recursion(n);
+};
+```
+
+<br/>
+
+## Explanation
 
 I've written a function called `isHappy` that takes in a number `n` as a parameter. Its purpose is to determine if the number is a `happy number` using recursion.
 <br/>
@@ -105,7 +92,7 @@ Within the `recursion` function, the number is converted to a string and split i
 A variable called `newNumber` is initialized to `0`.
 <br/>
 
-A for loop iterates through each digit in the array. For each digit, it is squared using the exponentiation operator (**), and the result is added to `newNumber`.
+A for loop iterates through each digit in the array. For each digit, it is squared using the exponentiation operator (`**`), and the result is added to `newNumber`.
 <br/>
 
 After the loop, there are three conditional statements:

@@ -1,102 +1,89 @@
-# JavaScript Sort Characters By Frequency
+# JavaScript Sort Characters by Frequency
+<br/>
 
-## Challenge:
-
+## Challenge
 Given a string `s`, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.
 
 Return the sorted string. If there are multiple answers, return any of them.
-
-### 1<sup>st</sup> Example:
-
-`Input: s = "tree"`
-<br/>
-`Output: "eert"`
-<br/>
-`Explanation: "e" appears twice while "r" and "t" both appear once.`
-<br/>
-`So "e" must appear before both "r" and "t". Therefore "eetr" is also a valid answer.`
-
-### 2<sup>nd</sup> Example:
-
-`Input: s = "cccaaa"`
-<br/>
-`Output: "aaaccc"`
-<br/>
-`Explanation: Both "c" and "a" appear three times, so both "cccaaa" and "aaaccc" are valid answers.`
-<br/>
-`Note that "cacaca" is incorrect, as the same characters must be together.`
-
-### 3<sup>rd</sup> Example:
-
-`Input: s = "Aabb"`
-<br/>
-`Output: "bbAa"`
-<br/>
-`Explanation: "bbaA" is also a valid answer, but "Aabb" is incorrect.`
-<br/>
-`Note that "A" and "a" are treated as two different characters.`
-
-### Constraints:
-
-`1 <= s.length <= 5 * 10⁵`
-<br/>
-`s` consists of uppercase and lowercase English letters and digits.
-
-## Solution:
-
-`const frequencySort = (s) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`let hashMap = new Map(),`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`result  = [];`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`for (let i = 0; i < s.length; i++) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if (!hashMap.has(s[i])) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`hashMap.set(s[i], 1);`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`} else {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`hashMap.set(s[i], hashMap.get(s[i]) + 1);`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`let sortedMap  = new Map(`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`[...hashMap.entries()].sort((a, b) => b[1] - a[1])`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`);`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`for (let [key, value] of sortedMap) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`let i = 0;`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`while (i < value) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`result.push(key);`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`i++;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return result.join('');`
-<br/>
-`};`
 <br/>
 <br/>
 
-## Explanation:
+### 1<sup>st</sup> Example
+
+```JavaScript
+Input: s = 'tree'
+Output: 'eert'
+Explanation: 'e' appears twice while 'r' and 't' both appear once.
+             So 'e' must appear before both 'r' and 't'.
+             Therefore 'eetr' is also a valid answer.
+```
+
+### 2<sup>nd</sup> Example
+
+```JavaScript
+Input: s = 'cccaaa'
+Output: 'aaaccc'
+Explanation: Both 'c' and 'a' appear three times, so both 'cccaaa' and 'aaaccc' are valid answers.
+             Note that 'cacaca' is incorrect, as the same characters must be together.
+```
+
+### 3<sup>rd</sup> Example
+
+```JavaScript
+Input: s = 'Aabb'
+Output: 'bbAa'
+Explanation: 'bbaA' is also a valid answer, but 'Aabb' is incorrect.
+             Note that 'A' and 'a' are treated as two different characters.
+```
+
+<br/>
+
+### Constraints
+
+```JavaScript
+1 <= s.length <= 5 * 10⁵
+```
+
+- `s` consists of uppercase and lowercase English letters and digits.
+
+<br/>
+
+## Solution
+
+```JavaScript
+const frequencySort = (s) => {
+    let hashMap = new Map(),
+        result  = [];
+
+    for (let i = 0; i < s.length; i++) {
+        if (!hashMap.has(s[i])) {
+            hashMap.set(s[i], 1);
+        } else {
+            hashMap.set(s[i], hashMap.get(s[i]) + 1);
+        }
+    }
+
+    let sortedMap  = new Map(
+        [...hashMap.entries()].sort((a, b) => b[1] - a[1])
+    );
+
+    for (let [key, value] of sortedMap) {
+        let i = 0;
+
+        while (i < value) {
+            result.push(key);
+
+            i++;
+        }
+    }
+
+    return result.join('');
+};
+```
+
+<br/>
+
+## Explanation
 
 I've created a function called `frequencySort` that takes a string `s` as input. Its purpose is to sort the characters in the string based on their frequency.
 <br/>

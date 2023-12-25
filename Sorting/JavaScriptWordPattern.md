@@ -1,81 +1,76 @@
 # JavaScript Word Pattern
+<br/>
 
-## Challenge:
-
+## Challenge
 Given a `pattern` and a string `s`, find if `s` follows the same pattern.
 
 Here follow means a full match, such that there is a bijection between a letter in `pattern` and a non-empty word in `s`.
-
-### 1<sup>st</sup> Example:
-
-`Input: pattern = "abba", s = "dog cat cat dog"`
-<br/>
-`Output: true`
-
-### 2<sup>nd</sup> Example:
-
-`Input: pattern = "abba", s = "dog cat cat fish"`
-<br/>
-`Output: false`
-
-### 3<sup>rd</sup> Example:
-
-`Input: pattern = "aaaa", s = "dog cat cat dog"`
-<br/>
-`Output: false`
-
-### Constraints:
-
-`1 <= pattern.length <= 300`
-<br/>
-`pattern` contains only lower-case English letters.
-<br/>
-`1 <= s.length <= 3000`
-<br/>
-`s` contains only lowercase English letters and spaces `' '`.
-<br/>
-`s` does not contain any leading or trailing spaces.
-<br/>
-All the words in `s` are separated by a single space.
-
-## Solution:
-
-`const wordPattern = (pattern, s) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`const arr = s.split(' '),`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`map = {};`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if(arr.length !== pattern.length || new Set([...pattern]).size !== new Set(arr).size) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return false;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`for(let i = 0; i < pattern.length; i++) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if(!map[pattern[i]]) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`map[pattern[i]] = arr[i];`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`} else if(map[pattern[i]] !== arr[i]) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return false;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return true;`
-<br/>
-`};`
 <br/>
 <br/>
 
-## Explanation:
+### 1<sup>st</sup> Example
+
+```JavaScript
+Input: pattern = 'abba', s = 'dog cat cat dog'
+Output: true
+```
+
+### 2<sup>nd</sup> Example
+
+```JavaScript
+Input: pattern = 'abba', s = 'dog cat cat fish'
+Output: false
+```
+
+### 3<sup>rd</sup> Example
+
+```JavaScript
+Input: pattern = 'aaaa', s = 'dog cat cat dog'
+Output: false
+```
+
+<br/>
+
+### Constraints
+
+```JavaScript
+1 <= pattern.length <= 300
+1 <= s.length <= 3000
+```
+
+- `pattern` contains only lower-case English letters.
+- `s` contains only lowercase English letters and spaces `' '`.
+- `s` does not contain any leading or trailing spaces.
+- All the words in `s` are separated by a single space.
+
+<br/>
+
+## Solution
+
+```JavaScript
+const wordPattern = (pattern, s) => {
+    const arr = s.split(' '),
+          map = {};
+
+    if(arr.length !== pattern.length || new Set([...pattern]).size !== new Set(arr).size) {
+        return false;
+    }
+
+    for(let i = 0; i < pattern.length; i++) {
+        if(!map[pattern[i]]) {
+            map[pattern[i]] = arr[i];
+        } else if(map[pattern[i]] !== arr[i]) {
+            return false;
+        }
+    }
+
+    return true;
+};
+```
+
+<br/>
+
+## Explanation
 
 I've built a function called `wordPattern` that takes two parameters: `pattern` and `s` (string). Its purpose is to check if the pattern matches the string by mapping each character in the pattern to a word in the string.
 <br/>
@@ -92,7 +87,7 @@ Next, a `for` loop is used to iterate through each character in the `pattern`. I
 If the current character is already a key in the `map` object, it checks if the value of the key matches the corresponding word in `arr`. If the values do not match, the function immediately returns `false`.
 <br/>
 
-If the `for` loop completes without returning `false`, it means that the pattern matches the string, and the function returns true.
+If the `for` loop completes without returning `false`, it means that the pattern matches the string, and the function returns `true`.
 <br/>
 
 In summary, the `wordPattern` function checks if a given pattern matches a given string by mapping each character in the pattern to a word in the string. It returns `true` if the mapping is successful, and `false` otherwise.

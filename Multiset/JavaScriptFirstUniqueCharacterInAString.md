@@ -1,61 +1,64 @@
-# JavaScript First Unique Character In A String
+# JavaScript First Unique Character in a String
+<br/>
 
-## Challenge:
-
+## Challenge
 Given a string `s`, find the first non-repeating character in it and return its index. If it does not exist, return `-1`.
-
-### 1<sup>st</sup> Example:
-
-`Input: s = "super"`
-<br/>
-`Output: 0`
-
-### 2<sup>nd</sup> Example:
-
-`Input: s = "supsuperklok"`
-<br/>
-`Output: 6`
-
-### 3<sup>rd</sup> Example:
-
-`Input: s = "aabb"`
-<br/>
-`Output: -1`
-
-### Constraints:
-
-`1 <= s.length <= 10⁵`
-<br/>
-`s` consists of only lowercase English letters.
-
-## Solution:
-
-`const firstUniqChar = (s) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`const map = {};`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`for (let char of s) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`map[char] ? map[char]++ : map[char] = 1;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`for (let i = 0; i < s.length; i++) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if (map[s[i]] === 1) return i;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return -1;`
-<br/>
-`};`
 <br/>
 <br/>
 
-## Explanation:
+### 1<sup>st</sup> Example
+
+```JavaScript
+Input: s = 'super'
+Output: 0
+```
+
+### 2<sup>nd</sup> Example
+
+```JavaScript
+Input: s = 'supsuperklok'
+Output: 6
+```
+
+### 3<sup>rd</sup> Example
+
+```JavaScript
+Input: s = 'aabb'
+Output: -1
+```
+
+<br/>
+
+### Constraints
+
+```JavaScript
+1 <= s.length <= 10⁵
+s consists of only lowercase English letters.
+```
+
+<br/>
+
+## Solution
+
+```JavaScript
+const firstUniqChar = (s) => {
+    const map = {};
+
+    for (let char of s) {
+        map[char] ? map[char]++ : map[char] = 1;
+    }
+
+    for (let i = 0; i < s.length; i++) {
+        if (map[s[i]] === 1) return i;
+    }
+
+    return -1;
+};
+```
+
+<br/>
+
+## Explanation
 
 I've written a function called `firstUniqChar` that takes a string `s` as input. Its purpose is to find the index of the first unique character in the string. If there is no unique character, it returns `-1`.
 <br/>

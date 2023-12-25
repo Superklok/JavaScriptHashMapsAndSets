@@ -1,73 +1,77 @@
 # JavaScript Unique Morse Code Words
+<br/>
 
-## Challenge:
-
+## Challenge
 International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:
-<br/>
-`'a'` maps to `".-"`,
-<br/>
-`'b'` maps to `"-..."`,
-<br/>
-`'c'` maps to `"-.-."`, and so on.
 
-For convenience, the full table for the `26` letters of the English alphabet is given below:
+- `'a'` maps to `'.-'`,
+- `'b'` maps to `'-...'`,
+- `'c'` maps to `'-.-.'`, and so on.
 
-`[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]`
+For convenience, the full table for the `26` letters of the English alphabet is provided below:
+
+- `['.-','-...','-.-.','-..','.','..-.','--.','....','..','.---','-.-','.-..','--','-.','---','.--.','--.-','.-.','...','-','..-','...-','.--','-..-','-.--','--..']`
 
 Given an array of strings `words` where each word can be written as a concatenation of the Morse code of each letter.
 
-For example, `"cab"` can be written as `"-.-..--..."`, which is the concatenation of `"-.-."`, `".-"`, and `"-..."`. We will call such a concatenation the transformation of a word.
+For example, `'cab'` can be written as `'-.-..--...'`, which is the concatenation of `'-.-.'`, `'.-'`, and `'-...'`. We will call such a concatenation the transformation of a word.
 
 Return the number of different transformations among all words we have.
-
-### 1<sup>st</sup> Example:
-
-`Input: words = ["gin","zen","gig","msg"]`
-<br/>
-`Output: 2`
-<br/>
-`Explanation: The transformation of each word is:`
-<br/>
-`"gin" -> "--...-."`
-<br/>
-`"zen" -> "--...-."`
-<br/>
-`"gig" -> "--...--."`
-<br/>
-`"msg" -> "--...--."`
-<br/>
-`There are 2 different transformations: "--...-." and "--...--.".`
-
-### 2<sup>nd</sup> Example:
-
-`Input: words = ["a"]`
-<br/>
-`Output: 1`
-
-### Constraints:
-
-`1 <= words.length <= 100`
-<br/>
-`1 <= words[i].length <= 12`
-<br/>
-`words[i]` consists of lowercase English letters.
-
-## Solution:
-
-`const uniqueMorseRepresentations = (words) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`const decode       = word => word.split('').map(morseLetter => morseLibrary[morseLetter]).join(''),`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`morseLibrary = { a: ".-", b: "-...", c: "-.-.", d: "-..", e: ".", f: "..-.", g: "--.", h: "....", i: "..", j: ".---", k: "-.-", l: ".-..", m: "--", n: "-.", o: "---", p: ".--.", q: "--.-", r: ".-.", s: "...", t: "-", u: "..-", v: "...-", w: ".--", x: "-..-", y: "-.--", z: "--.." };`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return new Set(words.map(decode)).size;`
-<br/>
-`};`
 <br/>
 <br/>
 
-## Explanation:
+### 1<sup>st</sup> Example
+
+```JavaScript
+Input: words = ['gin','zen','gig','msg']
+Output: 2
+Explanation: The transformation of each word is:
+             'gin' -> '--...-.'
+             'zen' -> '--...-.'
+             'gig' -> '--...--.'
+             'msg' -> '--...--.'
+             There are 2 different transformations:
+			 '--...-.' and '--...--.'.
+```
+
+### 2<sup>nd</sup> Example
+
+```JavaScript
+Input: words = ['a']
+Output: 1
+```
+
+<br/>
+
+### Constraints
+
+```JavaScript
+1 <= words.length <= 100
+1 <= words[i].length <= 12
+```
+
+- `words[i]` consists of lowercase English letters.
+
+<br/>
+
+## Solution
+
+```JavaScript
+const uniqueMorseRepresentations = (words) => {
+    const decode       = word => word.split('').map(morseLetter => morseLibrary[morseLetter]).join(''),
+          morseLibrary = {
+              a: '.-', b: '-...', c: '-.-.', d: '-..', e: '.', f: '..-.', g: '--.', h: '....', i: '..',
+              j: '.---', k: '-.-', l: '.-..', m: '--', n: '-.', o: '---', p: '.--.', q: '--.-', r: '.-.',
+              s: '...', t: '-', u: '..-', v: '...-', w: '.--', x: '-..-', y: '-.--', z: '--..'
+          };
+
+    return new Set(words.map(decode)).size;
+};
+```
+
+<br/>
+
+## Explanation
 
 I've created a function called `uniqueMorseRepresentations` that takes an array of words as input. Its purpose is to return the number of unique morse code representations of those words.
 <br/>

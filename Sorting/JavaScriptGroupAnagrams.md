@@ -1,68 +1,70 @@
 # JavaScript Group Anagrams
+<br/>
 
-## Challenge:
-
+## Challenge
 Given an array of strings `strs`, group the anagrams together. You can return the answer in any order.
 
 An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
-
-### 1<sup>st</sup> Example:
-
-`Input: strs = ["eat","tea","tan","ate","nat","bat"]`
-<br/>
-`Output: [["bat"],["nat","tan"],["ate","eat","tea"]]`
-
-### 2<sup>nd</sup> Example:
-
-`Input: strs = [""]`
-<br/>
-`Output: [[""]]`
-
-### 3<sup>rd</sup> Example:
-
-`Input: strs = ["a"]`
-<br/>
-`Output: [["a"]]`
-
-### Constraints:
-
-`1 <= strs.length <= 10⁴`
-<br/>
-`0 <= strs[i].length <= 100`
-<br/>
-`strs[i]` consists of lowercase English letters.
-
-## Solution:
-
-`const groupAnagrams = (strs) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`let map = {};`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`for(let str of strs) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`let s = str.split('').sort().join('');`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if(!map[s]) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`map[s] = [];`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`map[s].push(str);`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return Object.values(map);`
-<br/>
-`};`
 <br/>
 <br/>
 
-## Explanation:
+### 1<sup>st</sup> Example
+
+```JavaScript
+Input: strs = ['eat','tea','tan','ate','nat','bat']
+Output: [['bat'],['nat','tan'],['ate','eat','tea']]
+```
+
+### 2<sup>nd</sup> Example
+
+```JavaScript
+Input: strs = ['']
+Output: [['']]
+```
+
+### 3<sup>rd</sup> Example
+
+```JavaScript
+Input: strs = ['a']
+Output: [['a']]
+```
+
+<br/>
+
+### Constraints
+
+```JavaScript
+1 <= strs.length <= 10⁴
+0 <= strs[i].length <= 100
+```
+
+- `strs[i]` consists of lowercase English letters.
+
+<br/>
+
+## Solution
+
+```JavaScript
+const groupAnagrams = (strs) => {
+    let map = {};
+
+    for(let str of strs) {
+        let s = str.split('').sort().join('');
+
+        if(!map[s]) {
+            map[s] = [];
+        }
+
+        map[s].push(str);
+    }
+
+    return Object.values(map);
+};
+```
+
+<br/>
+
+## Explanation
 
 I've coded a function called `groupAnagrams` that takes in an array of strings as input. Its purpose is to group the strings that are anagrams of each other and return an array of arrays, where each inner array contains the grouped anagrams.
 <br/>
