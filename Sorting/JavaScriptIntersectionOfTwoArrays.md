@@ -25,10 +25,8 @@ Explanation: [4,9] is also accepted.
 
 ### Constraints
 
-```JavaScript
-1 <= nums1.length, nums2.length <= 1000
-0 <= nums1[i], nums2[i] <= 1000
-```
+- `1 <= nums1.length, nums2.length <= 1000`
+- `0 <= nums1[i], nums2[i] <= 1000`
 
 <br/>
 
@@ -82,3 +80,22 @@ Finally, after iterating through all elements in `nums2`, the function returns t
 In summary, the `intersection` function finds the common elements between two arrays (`nums1` and `nums2`) by utilizing a `Map` object. It stores the elements of the first array in the map and then checks for common elements in the second array, pushing them into an output array.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Valid Sudoku)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Groups of Special-Equivalent Strings)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptValidSudoku.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptGroupsOfSpecialEquivalentStrings.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

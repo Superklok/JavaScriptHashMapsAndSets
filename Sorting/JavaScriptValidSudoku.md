@@ -51,11 +51,8 @@ Since there are two 8's in the top left 3x3 sub-box, it is invalid.
 
 ### Constraints
 
-```JavaScript
-board.length == 9
-board[i].length == 9
-```
-
+- `board.length == 9`
+- `board[i].length == 9`
 - `board[i][j]` is a digit `1-9` or `'.'`.
 
 <br/>
@@ -126,3 +123,22 @@ After the loops have finished iterating over all the cells, the function returns
 In summary, the `isValidSudoku` function checks if a given Sudoku board is valid by ensuring that no number is repeated in the same row, column, or `3x3` box. It uses an object (`map`) to keep track of the numbers that have already appeared in each row, column, and box.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Isomorphic Strings)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Intersection of Two Arrays)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptIsomorphicStrings.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptIntersectionOfTwoArrays.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

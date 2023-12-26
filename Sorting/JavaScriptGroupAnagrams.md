@@ -33,11 +33,8 @@ Output: [['a']]
 
 ### Constraints
 
-```JavaScript
-1 <= strs.length <= 10⁴
-0 <= strs[i].length <= 100
-```
-
+- `1 <= strs.length <= 10⁴`
+- `0 <= strs[i].length <= 100`
 - `strs[i]` consists of lowercase English letters.
 
 <br/>
@@ -90,3 +87,22 @@ After the loop finishes, the function uses `Object.values(map)` to extract all t
 In summary, the `groupAnagrams` function takes an array of strings, groups the anagrams together, and returns an array of arrays representing the grouped anagrams.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Longest Substring Without Repeating Characters)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Find Bottom Left Tree Value)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptLongestSubstringWithoutRepeatingCharacters.md
+[Previous]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptFindBottomLeftTreeValue.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

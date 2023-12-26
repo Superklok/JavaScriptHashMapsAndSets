@@ -40,10 +40,7 @@ Explanation: 'bbaA' is also a valid answer, but 'Aabb' is incorrect.
 
 ### Constraints
 
-```JavaScript
-1 <= s.length <= 5 * 10⁵
-```
-
+- `1 <= s.length <= 5 * 10⁵`
 - `s` consists of uppercase and lowercase English letters and digits.
 
 <br/>
@@ -109,3 +106,22 @@ Finally, the function returns the `result` array joined as a string, which repre
 In summary, the `frequencySort` function sorts the characters in the input string based on their frequency. It uses a `Map` object to store the frequency of each character, sorts the entries of the `Map` in descending order, and builds a sorted array of characters. The function then returns the sorted characters as a string.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Most Common Word)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Find the Difference)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptMostCommonWord.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptFindTheDifference.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

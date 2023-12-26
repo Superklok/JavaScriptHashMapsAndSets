@@ -23,21 +23,18 @@ Explanation: MyHashMap myHashMap = new MyHashMap();
 myHashMap.put(1, 1); // The map is now [[1,1]]
 myHashMap.put(2, 2); // The map is now [[1,1], [2,2]]
 myHashMap.get(1);    // return 1, The map is now [[1,1], [2,2]]
-myHashMap.get(3);    // return -1 (i.e., not found), The map is now [[1,1], [2,2]]
-myHashMap.put(2, 1); // The map is now [[1,1], [2,1]] (i.e., update the existing value)
+myHashMap.get(3);    // return -1 (ex. not found), The map is now [[1,1], [2,2]]
+myHashMap.put(2, 1); // The map is now [[1,1], [2,1]] (ex. update the existing value)
 myHashMap.get(2);    // return 1, The map is now [[1,1], [2,1]]
 myHashMap.remove(2); // remove the mapping for 2, The map is now [[1,1]]
-myHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1,1]]
+myHashMap.get(2);    // return -1 (ex. not found), The map is now [[1,1]]
 ```
 
 <br/>
 
 ### Constraints
 
-```JavaScript
-0 <= key, value <= 10⁶
-```
-
+- `0 <= key, value <= 10⁶`
 - At most `10⁴` calls will be made to `put`, `get`, and `remove`.
 
 <br/>
@@ -84,3 +81,22 @@ The `remove` method is defined as a prototype function of the `MyHashMap` class.
 To summarize, I've designed a hash map data structure with the ability to add, retrieve, and remove key-value pairs.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Design HashSet)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Word Pattern)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptDesignHashSet.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptWordPattern.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

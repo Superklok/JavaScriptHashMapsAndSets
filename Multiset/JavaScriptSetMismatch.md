@@ -28,10 +28,8 @@ Output: [1,2]
 
 ### Constraints
 
-```JavaScript
-2 <= nums.length <= 10⁴
-1 <= nums[i] <= 10⁴
-```
+- `2 <= nums.length <= 10⁴`
+- `1 <= nums[i] <= 10⁴`
 
 <br/>
 
@@ -89,3 +87,22 @@ Finally, the `output` array is returned.
 In summary, this function finds and returns an array containing one duplicate number and one missing number from the input array.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Number of Atoms)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Most Common Word)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptNumberOfAtoms.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptMostCommonWord.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

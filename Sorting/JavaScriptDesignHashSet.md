@@ -32,10 +32,7 @@ myHashSet.contains(2); // return False, (already removed)
 
 ### Constraints
 
-```JavaScript
-0 <= key <= 10⁶
-```
-
+- `0 <= key <= 10⁶`
 - At most 10⁴ calls will be made to add, remove, and contains.
 
 <br/>
@@ -89,3 +86,22 @@ In the `contains` method, the `hasOwnProperty` method is used to check if the cu
 In summary, I've defined a class called `MyHashSet` with methods to add, remove, and check for the presence of a `key` in the set. This implementation allows for efficient management of a set of unique values.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (First Unique Character in a String)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Design HashMap)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptFirstUniqueCharacterInAString.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptDesignHashMap.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

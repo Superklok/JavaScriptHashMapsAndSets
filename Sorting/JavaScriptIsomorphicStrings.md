@@ -35,11 +35,8 @@ Output: true
 
 ### Constraints
 
-```JavaScript
-1 <= s.length <= 5 * 10⁴
-t.length == s.length
-```
-
+- `1 <= s.length <= 5 * 10⁴`
+- `t.length == s.length`
 - `s` and `t` consist of any valid ascii character.
 
 <br/>
@@ -90,3 +87,22 @@ After the loop ends, it means that all characters in `s` and `t` have been check
 In summary, the `isIsomorphic` function checks if two strings are isomorphic by using two hash tables to map characters from each string and comparing their values. If any mismatch is found, it returns `false`, otherwise it returns `true`.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Word Pattern)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Valid Sudoku)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptWordPattern.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptValidSudoku.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

@@ -29,11 +29,8 @@ Output: 'y'
 
 ### Constraints
 
-```JavaScript
-0 <= s.length <= 1000
-t.length == s.length + 1
-```
-
+- `0 <= s.length <= 1000`
+- `t.length == s.length + 1`
 - `s` and `t` consist of lowercase English letters.
 
 <br/>
@@ -89,3 +86,22 @@ If the function reaches this point without returning a letter, it means that all
 In summary, the `findTheDifference` function finds the difference between two strings by comparing the frequency of each letter in the strings. It uses an object to store the frequency of letters in the first string and checks if each letter in the second string is present in the object. If a letter is not found, it is considered the difference, and the function returns that letter.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Sort Characters by Frequency)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Subdomain Visit Count)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptSortCharactersByFrequency.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptSubdomainVisitCount.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

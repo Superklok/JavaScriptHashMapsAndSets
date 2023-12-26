@@ -31,16 +31,13 @@ Explanation: The answer is 'wke', with the length of 3.
 ```
 
 > [!IMPORTANT]
-> The answer must be a substring, please note that 'pwke' is a subsequence and not a substring.
+> The answer must be a substring, please note that `'pwke'` is a subsequence and not a substring.
 
 <br/>
 
 ### Constraints
 
-```JavaScript
-0 <= s.length <= 5 * 10⁴
-```
-
+- `0 <= s.length <= 5 * 10⁴`
 - `s` consists of English letters, digits, symbols and spaces.
 
 <br/>
@@ -114,3 +111,22 @@ After iterating through all the characters of the input string, the function ret
 In summary, the `lengthOfLongestSubstring` function finds the length of the longest substring without repeating characters in a given string by using a set to keep track of unique characters and two pointers to track the current substring.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Jewels & Stones)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Group Anagrams)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptJewelsAndStones.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptGroupAnagrams.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

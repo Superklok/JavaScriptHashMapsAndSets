@@ -31,10 +31,8 @@ Output: -1
 
 ### Constraints
 
-```JavaScript
-1 <= s.length <= 10⁵
-s consists of only lowercase English letters.
-```
+- `1 <= s.length <= 10⁵`
+- `s` consists of only lowercase English letters.
 
 <br/>
 
@@ -81,3 +79,22 @@ If no unique character is found in the string, the function returns `-1`.
 In summary, the `firstUniqChar` function counts the occurrences of each character in the string using an object, and then finds and returns the index of the first unique character in the string.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Subdomain Visit Count)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Design HashSet)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptSubdomainVisitCount.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptDesignHashSet.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

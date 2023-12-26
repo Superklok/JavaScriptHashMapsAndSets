@@ -28,10 +28,7 @@ Output: ['banana']
 
 ### Constraints
 
-```JavaScript
-1 <= s1.length, s2.length <= 200
-```
-
+- `1 <= s1.length, s2.length <= 200`
 - `s1` and `s2` consist of lowercase English letters and spaces.
 - `s1` and `s2` do not have leading or trailing spaces.
 - All the words in `s1` and `s2` are separated by a single space.
@@ -102,3 +99,22 @@ Finally, the function returns the output array containing all the unique words t
 In summary, the `uncommonFromSentences` function finds the uncommon words between two sentences by using a `Map` object to count the frequencies of words in the sentences. It then iterates through the `Map` and adds the words with a frequency of `1` to an output array, which is returned as the result.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Distribute Candies)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Happy Number)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptDistributeCandies.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptHappyNumber.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

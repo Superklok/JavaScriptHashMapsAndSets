@@ -39,12 +39,9 @@ Explanation: Trev can only eat 4 / 2 = 2 candies. Even though he can eat 2 candi
 
 ### Constraints
 
-```JavaScript
-n == candyType.length
-2 <= n <= 10⁴
--10⁵ <= candyType[i] <= 10⁵
-```
-
+- `n == candyType.length`
+- `2 <= n <= 10⁴`
+- `-10⁵ <= candyType[i] <= 10⁵`
 - `n` is even.
 
 <br/>
@@ -104,3 +101,22 @@ After the loop finishes, the function returns the final value of `output`, which
 In summary, this function calculates the maximum number of different candies that can be distributed to a person by iterating through an array of candy types and keeping track of the number of unique candy types encountered.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Groups of Special-Equivalent Strings)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Uncommon Words From Two Sentences)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptGroupsOfSpecialEquivalentStrings.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptUncommonWordsFromTwoSentences.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

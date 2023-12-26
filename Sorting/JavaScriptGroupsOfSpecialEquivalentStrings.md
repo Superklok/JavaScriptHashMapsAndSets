@@ -41,11 +41,8 @@ Output: 3
 
 ### Constraints
 
-```JavaScript
-1 <= words.length <= 1000
-1 <= words[i].length <= 20
-```
-
+- `1 <= words.length <= 1000`
+- `1 <= words[i].length <= 20`
 - `words[i]` consist of lowercase English letters.
 - All the strings are of the same length.
 
@@ -93,3 +90,22 @@ Finally, the function returns the size of the `Set` object, which represents the
 In summary, the `numSpecialEquivGroups` function groups words based on their special equivalence and returns the count of unique groups. The special equivalence is determined by splitting the words into odd-indexed and even-indexed characters, sorting them, and concatenating them into a single string.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Intersection of Two Arrays)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Distribute Candies)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptIntersectionOfTwoArrays.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptDistributeCandies.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

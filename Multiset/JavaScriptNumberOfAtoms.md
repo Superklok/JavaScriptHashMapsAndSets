@@ -52,10 +52,7 @@ Explanation: The count of elements are {'K': 4, 'N': 2, 'O': 14, 'S': 4}.
 
 ### Constraints
 
-```JavaScript
-1 <= formula.length <= 1000
-```
-
+- `1 <= formula.length <= 1000`
 - `formula` consists of English letters, digits, `'('`, and `')'`.
 - `formula` is always valid.
 
@@ -167,3 +164,22 @@ The resulting string, representing the count of each atom in the formula, is ret
 In summary, the `countOfAtoms` function parses a chemical formula and counts the occurrences of each atom in the formula. It uses a stack and helper functions to handle parentheses, elements, and their respective counts. The function returns a string representation of the count of each atom.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Pow(x, n))][Next]
+<br/>
+
+### :previous_track_button: [Previous (Set Mismatch)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptRecursionAndMemoization/blob/main/JavaScriptPowXN.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptSetMismatch.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

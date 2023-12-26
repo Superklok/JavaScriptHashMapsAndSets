@@ -36,9 +36,7 @@ Output: false
 
 ### Constraints
 
-```JavaScript
-1 <= n <= 2³¹ - 1
-```
+- `1 <= n <= 2³¹ - 1`
 
 <br/>
 
@@ -113,3 +111,22 @@ Finally, the function returns the result of the initial call to the `recursion` 
 In summary, the `isHappy` function determines if a number is a `happy number` by recursively calculating the sum of the squares of its digits. It uses a hashMap object to keep track of encountered numbers and returns true if the recursion reaches `1`, or false if it enters a cycle.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Uncommon Words from Two Sentences)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Unique Morse Code Words)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptUncommonWordsFromTwoSentences.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptUniqueMorseCodeWords.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

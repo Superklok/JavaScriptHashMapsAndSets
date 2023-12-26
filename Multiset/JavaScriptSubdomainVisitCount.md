@@ -43,11 +43,8 @@ Explanation: We will visit 'trevmorin.mail.com' 900 times, 'jetwheelreel.com' 50
 
 ### Constraints
 
-```JavaScript
-1 <= cpdomain.length <= 100
-1 <= cpdomain[i].length <= 100
-```
-
+- `1 <= cpdomain.length <= 100`
+- `1 <= cpdomain[i].length <= 100`
 - `cpdomain[i]` follows either the `'repᵢ d1ᵢ.d2ᵢ.d3ᵢ'` format or the `'repᵢ d1ᵢ.d2ᵢ'` format.
 - `repᵢ` is an integer in the range `[1, 10⁴]`.
 - `d1ᵢ`, `d2ᵢ`, and `d3ᵢ` consist of lowercase English letters.
@@ -120,3 +117,22 @@ The resulting array of strings is the final result of the function.
 In summary, the `subdomainVisits` function counts the number of visits to subdomains based on the input array of strings. It uses an object to store the count of visits for each subdomain and returns an array of strings representing the count and corresponding subdomains.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Find the Difference)][Next]
+<br/>
+
+### :previous_track_button: [Previous (First Unique Character in a String)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptFindTheDifference.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptFirstUniqueCharacterInAString.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

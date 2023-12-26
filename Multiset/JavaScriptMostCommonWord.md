@@ -32,12 +32,9 @@ Output: 'a'
 
 ### Constraints
 
-```JavaScript
-1 <= paragraph.length <= 1000
-0 <= banned.length <= 100
-1 <= banned[i].length <= 10
-```
-
+- `1 <= paragraph.length <= 1000`
+- `0 <= banned.length <= 100`
+- `1 <= banned[i].length <= 10`
 - Paragraph consists of English letters, space `' '`, or one of the symbols: `'!?',;.'`.
 - `banned[i]` consists of only lowercase English letters.
 
@@ -112,3 +109,22 @@ After the loop finishes, the function returns the `answer.word`, which represent
 In summary, the `mostCommonWord` function finds the most common word in a paragraph while excluding any banned words. It uses a set for efficient banned word lookup and a map to keep track of word frequencies.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Set Mismatch)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Sort Characters by Frequency)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptSetMismatch.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Multiset/JavaScriptSortCharactersByFrequency.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

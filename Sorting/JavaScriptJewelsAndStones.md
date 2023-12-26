@@ -1,4 +1,4 @@
-# JavaScript Jewels and Stones
+# JavaScript Jewels & Stones
 <br/>
 
 ## Challenge
@@ -26,10 +26,7 @@ Output: 0
 
 ### Constraints
 
-```JavaScript
-1 <= jewels.length, stones.length <= 50
-```
-
+- `1 <= jewels.length, stones.length <= 50`
 - `jewels` and `stones` consist of only English letters.
 - All the characters of `jewels` are unique.
 
@@ -83,3 +80,22 @@ After both loops have finished executing, the final value of the `output` variab
 In summary, the `numJewelsInStones` function counts the number of jewels present in stones by using a `Map` object to store the jewels and their indices. It then iterates through the stones, checking if each stone is a jewel, and increments the count accordingly.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Unique Morse Code Words)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Longest Substring Without Repeating Characters)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptUniqueMorseCodeWords.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptLongestSubstringWithoutRepeatingCharacters.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

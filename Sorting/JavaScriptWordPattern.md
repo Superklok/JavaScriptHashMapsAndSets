@@ -33,11 +33,8 @@ Output: false
 
 ### Constraints
 
-```JavaScript
-1 <= pattern.length <= 300
-1 <= s.length <= 3000
-```
-
+- `1 <= pattern.length <= 300`
+- `1 <= s.length <= 3000`
 - `pattern` contains only lower-case English letters.
 - `s` contains only lowercase English letters and spaces `' '`.
 - `s` does not contain any leading or trailing spaces.
@@ -93,3 +90,22 @@ If the `for` loop completes without returning `false`, it means that the pattern
 In summary, the `wordPattern` function checks if a given pattern matches a given string by mapping each character in the pattern to a word in the string. It returns `true` if the mapping is successful, and `false` otherwise.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Design HashMap)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Isomorphic Strings)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptDesignHashMap.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptIsomorphicStrings.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript

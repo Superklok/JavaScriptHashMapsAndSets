@@ -45,11 +45,8 @@ Output: 1
 
 ### Constraints
 
-```JavaScript
-1 <= words.length <= 100
-1 <= words[i].length <= 12
-```
-
+- `1 <= words.length <= 100`
+- `1 <= words[i].length <= 12`
 - `words[i]` consists of lowercase English letters.
 
 <br/>
@@ -91,3 +88,22 @@ Finally, the function returns the `size` property of the `Set` object, which rep
 In summary, the `uniqueMorseRepresentations` function takes an array of words, converts each word into its morse code representation, eliminates duplicates, and returns the count of unique morse code representations.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Happy Number)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Jewels & Stones)][Previous]
+<br/>
+
+### :play_or_pause_button: [More HashMap & HashSet Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptHappyNumber.md
+[Previous]: https://github.com/Superklok/JavaScriptHashMapsAndSets/blob/main/Sorting/JavaScriptJewelsAndStones.md
+[More]: https://github.com/Superklok/JavaScriptHashMapsAndSets
+[Return]: https://github.com/Superklok/LearnJavaScript
