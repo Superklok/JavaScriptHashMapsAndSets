@@ -54,14 +54,14 @@ const distributeCandies = (candyType) => {
 
     let output = 0;
 
-    for(let i = 0; i < candyType.length; i++) {
-        if(!hashMap[candyType[i]]) {
+    for (let i = 0; i < candyType.length; i++) {
+        if (!hashMap[candyType[i]]) {
             output++;
         }
 
         hashMap[candyType[i]] = i + 1;
 
-        if(output === Math.floor(candyType.length/2)) {
+        if (output === Math.floor(candyType.length / 2)) {
             return output;
         }
     }

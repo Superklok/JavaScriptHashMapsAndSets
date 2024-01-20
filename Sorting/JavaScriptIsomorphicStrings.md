@@ -48,8 +48,8 @@ const isIsomorphic = (s, t) => {
     const hash1 = {},
           hash2 = {};
 
-    for(let i = 0; i < s.length; i++) {
-        if(hash1[s[i]] !== hash2[t[i]]) {
+    for (let i = 0; i < s.length; i++) {
+        if (hash1[s[i]] !== hash2[t[i]]) {
             return false;
         }
 

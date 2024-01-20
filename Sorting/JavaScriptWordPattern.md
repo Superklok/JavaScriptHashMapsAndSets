@@ -49,14 +49,14 @@ const wordPattern = (pattern, s) => {
     const arr = s.split(' '),
           map = {};
 
-    if(arr.length !== pattern.length || new Set([...pattern]).size !== new Set(arr).size) {
+    if (arr.length !== pattern.length || new Set([...pattern]).size !== new Set(arr).size) {
         return false;
     }
 
-    for(let i = 0; i < pattern.length; i++) {
-        if(!map[pattern[i]]) {
+    for (let i = 0; i < pattern.length; i++) {
+        if (!map[pattern[i]]) {
             map[pattern[i]] = arr[i];
-        } else if(map[pattern[i]] !== arr[i]) {
+        } else if (map[pattern[i]] !== arr[i]) {
             return false;
         }
     }

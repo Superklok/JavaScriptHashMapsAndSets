@@ -44,7 +44,7 @@ const numJewelsInStones = (jewels, stones) => {
     }
 
     for (let i = 0; i < stones.length; i++) {
-        if(hashMap.has(stones[i]))
+        if (hashMap.has(stones[i]))
             output++;
         }
 

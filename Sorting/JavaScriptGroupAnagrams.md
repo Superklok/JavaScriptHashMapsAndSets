@@ -45,10 +45,10 @@ Output: [['a']]
 const groupAnagrams = (strs) => {
     let map = {};
 
-    for(let str of strs) {
+    for (let str of strs) {
         let s = str.split('').sort().join('');
 
-        if(!map[s]) {
+        if (!map[s]) {
             map[s] = [];
         }
 

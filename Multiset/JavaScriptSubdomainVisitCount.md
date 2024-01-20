@@ -62,7 +62,7 @@ const subdomainVisits = (cpdomains) => {
 
         let subdomains = domains.split('.');
 
-        while(subdomains.length) {
+        while (subdomains.length) {
             let subdomain = subdomains.join('.');
 
             visitCounts[subdomain] = visitCounts.hasOwnProperty(subdomain) ?
