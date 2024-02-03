@@ -13,14 +13,16 @@ Given two sentences `s1` and `s2`, return a list of all the uncommon words. You 
 ### 1<sup>st</sup> Example
 
 ```JavaScript
-Input: s1 = 'this apple is sweet', s2 = 'this apple is sour'
+Input: s1 = 'this apple is sweet',
+       s2 = 'this apple is sour'
 Output: ['sweet','sour']
 ```
 
 ### 2<sup>nd</sup> Example
 
 ```JavaScript
-Input: s1 = 'apple apple', s2 = 'banana'
+Input: s1 = 'apple apple',
+       s2 = 'banana'
 Output: ['banana']
 ```
 

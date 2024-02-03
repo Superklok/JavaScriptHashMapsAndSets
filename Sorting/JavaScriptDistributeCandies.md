@@ -15,7 +15,9 @@ Given the integer array `candyType` of length `n`, return the maximum number of 
 ```JavaScript
 Input: candyType = [1,1,2,2,3,3]
 Output: 3
-Explanation: Trev can only eat 6 / 2 = 3 candies. Since there are only 3 types, he can eat one of each type.
+Explanation: Trev can only eat 6 / 2 = 3 candies. Since
+             there are only 3 types, he can eat one of each
+             type.
 ```
 
 ### 2<sup>nd</sup> Example
@@ -23,8 +25,9 @@ Explanation: Trev can only eat 6 / 2 = 3 candies. Since there are only 3 types, 
 ```JavaScript
 Input: candyType = [1,1,2,3]
 Output: 2
-Explanation: Trev can only eat 4 / 2 = 2 candies. Whether he eats types [1,2], [1,3], or [2,3],
-             he still can only eat 2 different types.
+Explanation: Trev can only eat 4 / 2 = 2 candies. Whether
+             he eats types [1,2], [1,3], or [2,3], he still
+             can only eat 2 different types.
 ```
 
 ### 3<sup>rd</sup> Example
@@ -32,7 +35,8 @@ Explanation: Trev can only eat 4 / 2 = 2 candies. Whether he eats types [1,2], [
 ```JavaScript
 Input: candyType = [6,6,6,6]
 Output: 1
-Explanation: Trev can only eat 4 / 2 = 2 candies. Even though he can eat 2 candies, he only has 1 type.
+Explanation: Trev can only eat 4 / 2 = 2 candies. Even
+             though he can eat 2 candies, he only has 1 type.
 ```
 
 <br/>

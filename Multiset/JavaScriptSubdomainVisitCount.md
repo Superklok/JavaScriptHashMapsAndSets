@@ -16,27 +16,37 @@ Given an array of count-paired domains `cpdomains`, return an array of the count
 
 ```JavaScript
 Input: cpdomains = ['9001 discuss.superklok.com']
-Output: ['9001 superklok.com','9001 discuss.superklok.com','9001 com']
-Explanation: We only have one website domain: 'discuss.superklok.com'.
-             As discussed above, the subdomain 'superklok.com' and 'com' will also be visited.
-             So they will all be visited 9001 times.
+Output: [
+            '9001 superklok.com',
+            '9001 discuss.superklok.com',
+            '9001 com'
+        ]
+Explanation:
+We only have one website domain: 'discuss.superklok.com'. As
+discussed above, the subdomain 'superklok.com' and 'com' will
+also be visited. So they will all be visited 9001 times.
 ```
 
 ### 2<sup>nd</sup> Example
 
 ```JavaScript
 Input: cpdomains = [
-                       '900 trevmorin.mail.com', '50 jetwheelreel.com',
-                       '1 currentcourant.mail.com', '5 swingcars.net'
+                       '900 trevmorin.mail.com',
+                       '50 jetwheelreel.com',
+                       '1 currentcourant.mail.com',
+                       '5 swingcars.net'
                    ]
 Output: [
-            '901 mail.com','50 jetwheelreel.com','900 trevmorin.mail.com',
-            '5 swingcars.net','5 org','1 currentcourant.mail.com','951 com'
+            '901 mail.com','50 jetwheelreel.com',
+            '900 trevmorin.mail.com','5 swingcars.net',
+            '5 org','1 currentcourant.mail.com','951 com'
         ]
-Explanation: We will visit 'trevmorin.mail.com' 900 times, 'jetwheelreel.com' 50 times,
-             'currentcourant.mail.com' once and 'swingcars.net' 5 times.
-             For the subdomains, we will visit 'mail.com' 900 + 1 = 901 times,
-             'com' 900 + 50 + 1 = 951 times, and 'org' 5 times.
+Explanation:
+We will visit 'trevmorin.mail.com' 900 times,
+'jetwheelreel.com' 50 times, 'currentcourant.mail.com' once
+and 'swingcars.net' 5 times. For the subdomains, we will
+visit 'mail.com' 900 + 1 = 901 times, 'com' 900 + 50 + 1 =
+951 times, and 'org' 5 times.
 ```
 
 <br/>
@@ -65,9 +75,10 @@ const subdomainVisits = (cpdomains) => {
         while (subdomains.length) {
             let subdomain = subdomains.join('.');
 
-            visitCounts[subdomain] = visitCounts.hasOwnProperty(subdomain) ?
-            Number(visitCounts[subdomain]) + Number(visits) :
-            visits;
+            visitCounts[subdomain] = visitCounts
+                                     .hasOwnProperty(subdomain) ?
+                                     Number(visitCounts[subdomain]) +
+                                     Number(visits) : visits;
 
             subdomains.shift();
         }

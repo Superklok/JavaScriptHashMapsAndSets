@@ -10,7 +10,12 @@ International Morse Code defines a standard encoding where each letter is mapped
 
 For convenience, the full table for the `26` letters of the English alphabet is provided below:
 
-- `['.-','-...','-.-.','-..','.','..-.','--.','....','..','.---','-.-','.-..','--','-.','---','.--.','--.-','.-.','...','-','..-','...-','.--','-..-','-.--','--..']`
+```JavaScript
+['.-','-...','-.-.','-..','.','..-.','--.',
+'....','..','.---','-.-','.-..','--','-.',
+'---','.--.','--.-','.-.','...','-','..-',
+'...-','.--','-..-','-.--','--..']
+```
 
 Given an array of strings `words` where each word can be written as a concatenation of the Morse code of each letter.
 
@@ -31,7 +36,7 @@ Explanation: The transformation of each word is:
              'gig' -> '--...--.'
              'msg' -> '--...--.'
              There are 2 different transformations:
-			 '--...-.' and '--...--.'.
+             '--...-.' and '--...--.'.
 ```
 
 ### 2<sup>nd</sup> Example
@@ -57,14 +62,16 @@ Output: 1
 const uniqueMorseRepresentations = (words) => {
     const decode       = word => word
                                  .split('')
-                                 .map(morseLetter => morseLibrary[morseLetter])
+                                 .map(morseLetter =>
+                                  morseLibrary[morseLetter])
                                  .join(''),
           morseLibrary = {
               a: '.-', b: '-...', c: '-.-.', d: '-..',
-              e: '.', f: '..-.', g: '--.', h: '....', i: '..',
-              j: '.---', k: '-.-', l: '.-..', m: '--', n: '-.',
-              o: '---', p: '.--.', q: '--.-', r: '.-.', s: '...',
-              t: '-', u: '..-', v: '...-', w: '.--', x: '-..-',
+              e: '.', f: '..-.', g: '--.', h: '....',
+              i: '..', j: '.---', k: '-.-', l: '.-..',
+              m: '--', n: '-.', o: '---', p: '.--.',
+              q: '--.-', r: '.-.', s: '...', t: '-',
+              u: '..-', v: '...-', w: '.--', x: '-..-',
               y: '-.--', z: '--..'
           };
 

@@ -24,10 +24,13 @@ Return the number of groups of special-equivalent strings from `words`.
 ```JavaScript
 Input: words = ['abcd','cdab','cbad','xyzz','zzxy','zzyx']
 Output: 3
-Explanation: One group is ['abcd', 'cdab', 'cbad'], since they are all pairwise special equivalent,
-             and none of the other strings is all pairwise special equivalent to these.
-             The other two groups are ['xyzz', 'zzxy'] and ['zzyx'].
-             Note that in particular, 'zzxy' is not special equivalent to 'zzyx'.
+Explanation: One group is ['abcd', 'cdab', 'cbad'], since
+             they are all pairwise special equivalent, and
+             none of the other strings is all pairwise
+             special equivalent to these. The other two
+             groups are ['xyzz', 'zzxy'] and ['zzyx']. Note
+             that in particular, 'zzxy' is not special
+             equivalent to 'zzyx'.
 ```
 
 ### 2<sup>nd</sup> Example

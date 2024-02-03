@@ -13,9 +13,9 @@ Return the sorted string. If there are multiple answers, return any of them.
 ```JavaScript
 Input: s = 'tree'
 Output: 'eert'
-Explanation: 'e' appears twice while 'r' and 't' both appear once.
-             So 'e' must appear before both 'r' and 't'.
-             Therefore 'eetr' is also a valid answer.
+Explanation: 'e' appears twice while 'r' and 't' both appear
+             once. So 'e' must appear before both 'r' and
+             't'. Therefore 'eetr' is also a valid answer.
 ```
 
 ### 2<sup>nd</sup> Example
@@ -23,8 +23,10 @@ Explanation: 'e' appears twice while 'r' and 't' both appear once.
 ```JavaScript
 Input: s = 'cccaaa'
 Output: 'aaaccc'
-Explanation: Both 'c' and 'a' appear three times, so both 'cccaaa' and 'aaaccc' are valid answers.
-             Note that 'cacaca' is incorrect, as the same characters must be together.
+Explanation: Both 'c' and 'a' appear three times, so both
+             'cccaaa' and 'aaaccc' are valid answers. Note
+             that 'cacaca' is incorrect, as the same
+             characters must be together.
 ```
 
 ### 3<sup>rd</sup> Example
@@ -32,8 +34,9 @@ Explanation: Both 'c' and 'a' appear three times, so both 'cccaaa' and 'aaaccc' 
 ```JavaScript
 Input: s = 'Aabb'
 Output: 'bbAa'
-Explanation: 'bbaA' is also a valid answer, but 'Aabb' is incorrect.
-             Note that 'A' and 'a' are treated as two different characters.
+Explanation: 'bbaA' is also a valid answer, but 'Aabb' is
+             incorrect. Note that 'A' and 'a' are treated
+             as two different characters.
 ```
 
 <br/>
